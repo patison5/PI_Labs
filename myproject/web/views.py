@@ -22,12 +22,7 @@ def index(request):
     context = {
         'posts': posts
     } 
-    return render(request, 'polls/home.html', context)
+    return render(request, 'web/index.html', context)
 
 def about(request):
-    # return HttpResponse("Hello, world. You're at the polls index.")
-    # context = {
-    #     'posts': posts
-    # } 
-    # return render(request, 'polls/elements.html', context)
     return JsonResponse({'foo':'bar'})

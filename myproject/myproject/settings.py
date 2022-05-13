@@ -36,7 +36,8 @@ CSRF_TRUSTED_ORIGINS =  [
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
+    'web.apps.WebConfig',
+    'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,3 +140,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CSRF_COOKIE_SECURE=False
+CSRF_COOKIE_HTTPONLY=False
