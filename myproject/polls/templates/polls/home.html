@@ -1,0 +1,14 @@
+{% extends "polls/base.html" %}
+
+{% block content %}
+    <h1>Home page</h1>
+
+    {% for post in posts %}
+        <ul>
+            <li>{{ post.author }} </li>
+            <li>{{ post.title }} </li>
+            <li>{{ post.description }}</li>
+            <li>{{ post.text }}</li>
+        </ul>
+    {% endfor %}
+{% endblock content %}
